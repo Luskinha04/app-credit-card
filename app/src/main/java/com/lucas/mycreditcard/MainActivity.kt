@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val editCardNumber = findViewById<EditText>(R.id.editCardNumber)
         val editCardExpiry = findViewById<EditText>(R.id.editCardExpiry)
+        val txtCardName = findViewById<EditText>(R.id.txtCardName)
 
         // Máscara do número do cartão (1234 5678 9012 3456)
         editCardNumber.addTextChangedListener(object : TextWatcher {
@@ -68,6 +69,21 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable?) {}
+        })
+
+        // Máscara para o nome do titular (somente letras e espaço)
+        txtCardName.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                val cleanText = s.toString().replace(Regex("[^a-zA-ZÀ-ÿ\\s]"), "")
+                if (s.toString() != cleanText) {
+                    txtCardName.setText(cleanText)
+                    txtCardName.setSelection(cleanText.length)
+                }
+            }
         })
     }
 }
