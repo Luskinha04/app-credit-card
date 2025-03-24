@@ -38,7 +38,7 @@ Criar uma interface de cartão de crédito no Android Studio, com foco em **form
 
 ## 📸 Screenshots
 
-<img src="screenshots/print1.png" width="350"> <img src="screenshots/print2.png" width="350">
+<img src="screenshots/print2.PNG" width="350"> <img src="screenshots/print1.PNG" width="350">
 
 ---
 
