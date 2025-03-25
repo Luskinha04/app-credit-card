@@ -22,7 +22,7 @@ Criar uma interface de cartão de crédito no Android Studio, com foco em **form
 ## 🧩 Validações Implementadas
 
 - O **número do cartão** deve ter exatamente **16 dígitos**.
-- O **nome do titular** deve ter **pelo menos 3 caracteres** e aceitar apenas letras e espaços.
+- O **nome do titular** deve aceitar apenas letras e espaços.
 - A **data de validade** segue o padrão obrigatório `MM/AA`.
 
 ---
